@@ -14,7 +14,6 @@ select * from user where email=? AND password=?""",(e,p))
         return True
     else: 
         return False
-    
 #login function
 def login():
     print("Welcome back!!")
@@ -23,8 +22,10 @@ def login():
     
     if(check_exists(email,password)):
         print("Login sucessfully!!")
+        return email
     else:
         print("Please sign up or password or email might be wrong")
+        return False
 def sign_in():
     validate=" "
     print("HEllo there new user!!")
